@@ -1,0 +1,11 @@
+{
+  "AnimationDuration": 0.6,
+  "HighlightColor": "#f2f2f2",
+  "UseBloomOnHighlight": true,
+  "UseProgessiveHighlight": false,
+  "CurveType": "QuartInOut",
+  "SwitchTo": "Disappear",
+  "EffectDirection": "BottomUp",
+  "LoopOption": "LoopMirror",
+  "HighlightThickness": 1
+}

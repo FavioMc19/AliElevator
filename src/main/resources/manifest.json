@@ -1,0 +1,16 @@
+{
+  "Group": "NekoPlugins",
+  "Name": "AliElevator",
+  "Version": "1.0.0",
+  "Authors": [
+    {
+      "Name": "favio"
+    }
+  ],
+  "ServerVersion": "*",
+  "Dependencies": {},
+  "OptionalDependencies": {},
+  "DisabledByDefault": false,
+  "Main": "net.nexarys.alielevator.AliElevator",
+  "IncludesAssetPack": true
+}

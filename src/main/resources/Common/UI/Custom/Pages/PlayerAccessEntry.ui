@@ -1,0 +1,15 @@
+$C = "../Common.ui";
+Group #entry {
+  LayoutMode: Left;
+  Anchor: (Height: 32, Bottom: 4);
+
+  Label #playerName {
+    Style: (FontSize: 14, TextColor: #FFFFFF, VerticalAlignment: Center);
+    Anchor: (Width: 160, Height: 32);
+  }
+
+  $C.@SecondaryTextButton #removeButton {
+    @Text = "X";
+    Anchor: (Width: 80, Height: 28);
+  }
+}

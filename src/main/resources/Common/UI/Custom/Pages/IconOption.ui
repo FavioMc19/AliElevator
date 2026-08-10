@@ -1,0 +1,15 @@
+$C = "../Common.ui";
+Group #iconOption {
+  Anchor: (Width: 56, Height: 56, Right: 6);
+
+  Group #selector {
+    Anchor: (Full: 0);
+    Background: PatchStyle(TexturePath: "../Hud/Textures/frame-base.png");
+  }
+
+  Button #icon {
+    Anchor: (Width: 40, Height: 40);
+    LayoutMode: MiddleCenter;
+    Style: ButtonStyle(Sounds: $C.@ButtonSounds);
+  }
+}

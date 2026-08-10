@@ -1,0 +1,153 @@
+$C = "../Common.ui";
+
+$C.@PageOverlay {
+  $C.@DecoratedContainer {
+    Anchor: (Width: 700, Height: 700);
+
+    #Title {
+      $C.@Title { @Text = "AliElevator Settings"; }
+    }
+
+    Group #Content {
+      LayoutMode: Top;
+      Padding: (Vertical: 16, Horizontal: 24);
+      Anchor: (Top: 28);
+
+      Label #blockLabel {
+        Text: "Block:";
+        Style: (FontSize: 16, TextColor: #FFFFFF, RenderBold: true);
+        Anchor: (Height: 24);
+      }
+
+      Group #blockListContainer {
+        Anchor: (Height: 68, Bottom: 16);
+        Background: #000000(0.25);
+        Padding: (Full: 6);
+
+        Group #blockList {
+          LayoutMode: LeftScrolling;
+          ScrollbarStyle: $C.@DefaultScrollbarStyle;
+        }
+      }
+
+      Label #colorLabel {
+        Text: "Color:";
+        Style: (FontSize: 16, TextColor: #FFFFFF, RenderBold: true);
+        Anchor: (Height: 24);
+      }
+
+      ColorPicker #colorPicker {
+        Anchor: (Height: 68, Bottom: 16);
+        Format: Rgb;
+        Style: $C.@DefaultColorPickerStyle;
+      }
+
+      Label #iconLabel {
+        Text: "Icon:";
+        Style: (FontSize: 16, TextColor: #FFFFFF, RenderBold: true);
+        Anchor: (Height: 24);
+      }
+
+      Group #iconListContainer {
+        Anchor: (Height: 80, Bottom: 16);
+        Background: #000000(0.25);
+        Padding: (Full: 6);
+
+        Group #iconList {
+          LayoutMode: LeftScrolling;
+          ScrollbarStyle: $C.@DefaultScrollbarStyle;
+        }
+      }
+
+      Label #playersLabel {
+        Text: "Access settings:";
+        Style: (FontSize: 16, TextColor: #FFFFFF, RenderBold: true);
+        Anchor: (Height: 24, Width: 200);
+      }
+
+      Group #separator {Anchor: (Height: 12);}
+
+      Label #addPlayerLabel {
+        Text: "Allowed players:";
+        Style: (FontSize: 14, TextColor: #FFFFFF, RenderBold: false);
+        Anchor: (Height: 20, Bottom: 4, Left: 120);
+      }
+
+      Group #playersSection {
+        LayoutMode: CenterMiddle;
+        Anchor: (Height: 160, Bottom: 16);
+
+        Group #playersListContainer {
+          Anchor: (Width: 268, Height: 160);
+          Background: #000000(0.25);
+          Padding: (Full: 6);
+
+          Group #playersList {
+            LayoutMode: TopScrolling;
+            ScrollbarStyle: $C.@DefaultScrollbarStyle;
+          }
+        }
+
+        Group { Anchor: (Width: 8); }
+
+        Group #playersSideColumn {
+          LayoutMode: Top;
+          Anchor: (Height: 160);
+
+          Label #addPlayerLabel {
+            Text: "Add player:";
+            Style: (FontSize: 14, TextColor: #FFFFFF, RenderBold: false);
+            Anchor: (Height: 20, Bottom: 4);
+          }
+
+          Group #addPlayerRow {
+            LayoutMode: Left;
+            Anchor: (Height: 36, Bottom: 8);
+
+            DropdownBox #onlinePlayersDropdown {
+              Style: $C.@DefaultDropdownBoxStyle;
+              Anchor: (Height: 36, Width: 180);
+            }
+
+            Group { Anchor: (Width: 8); }
+
+            $C.@TextButton #addPlayerButton {
+              @Text = "Add";
+              Anchor: (Width: 108, Height: 36);
+            }
+          }
+
+          Label #accessLabel {
+            Text: "Acces mode:";
+            Style: (FontSize: 14, TextColor: #FFFFFF, RenderBold: false);
+            Anchor: (Height: 20, Bottom: 4);
+          }
+
+          DropdownBox #accessMode {
+            Style: $C.@DefaultDropdownBoxStyle;
+            Anchor: (Height: 36, Width: 280);
+          }
+        }
+      }
+
+      Group #actionsRow {
+        LayoutMode: Center;
+        Anchor: (Height: 44, Top: 8);
+
+        Group {}
+
+        $C.@SecondaryTextButton #closeButton {
+          @Text = "Cancel";
+          Anchor: (Width: 120);
+        }
+
+        Group { Anchor: (Width: 10); }
+
+        $C.@TextButton #saveButton {
+          @Text = "Save";
+          Anchor: (Width: 120);
+        }
+      }
+    }
+  }
+}

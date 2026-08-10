@@ -1,0 +1,17 @@
+$C = "../Common.ui";
+
+ItemSlotButton #blockEntry {
+  Anchor: (Width: 44, Height: 44, Right: 6);
+  Style: $C.@DefaultButtonStyle;
+
+  ItemSlot #icon {
+    Anchor: (Full: 0);
+    ShowQualityBackground: false;
+  }
+
+  Group #selectedOverlay {
+    Visible: false;
+    Anchor: (Full: 0);
+    Background: PatchStyle(TexturePath: "../Hud/Textures/frame-selector.png");
+  }
+}
