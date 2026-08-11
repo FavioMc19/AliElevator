@@ -1,5 +1,0 @@
-# Whether to limit the number of linked elevator blocks in the same vertical column.
-limit-elevator-column-size: true
-
-# Maximum number of linked elevator blocks in the same vertical column.
-max-elevators-per-column: 10
