@@ -4,6 +4,7 @@ import com.hypixel.hytale.component.*;
 import com.hypixel.hytale.component.spatial.SpatialResource;
 import com.hypixel.hytale.math.util.ChunkUtil;
 import com.hypixel.hytale.math.vector.Rotation3f;
+import com.hypixel.hytale.math.vector.Transform;
 import com.hypixel.hytale.protocol.Position;
 import com.hypixel.hytale.protocol.SoundCategory;
 import com.hypixel.hytale.protocol.packets.world.PlaySoundEvent3D;
@@ -55,9 +56,11 @@ public class Utils {
         if (transformComponent == null) return;
 
         Vector3d targetPosition = new Vector3d(x, y, z);
+        Transform transform = transformComponent.getTransform();
 
-        Teleport teleport = Teleport.createForPlayer(transformComponent.getTransform());
-        teleport.setPosition(targetPosition);
+        Rotation3f headRotation = transform.getRotation();
+        Rotation3f bodyRotation = new Rotation3f(0.0F, headRotation.yaw(), 0.0F);
+        Teleport teleport = (new Teleport(null, targetPosition, bodyRotation)).setHeadRotation(headRotation);
         store.addComponent(ref, Teleport.getComponentType(), teleport);
     }
 

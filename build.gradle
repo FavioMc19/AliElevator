@@ -26,7 +26,7 @@ tasks.withType(JavaCompile).configureEach {
 }
 
 dependencies {
-    compileOnly("com.hypixel.hytale:Server:0.5.7")
+    compileOnly("com.hypixel.hytale:Server:0.6.0")
     compileOnly("org.projectlombok:lombok:1.18.42")
     annotationProcessor("org.projectlombok:lombok:1.18.42")
     implementation("org.yaml:snakeyaml:2.2")
